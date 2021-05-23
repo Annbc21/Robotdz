@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.2 on win32)" generated="20210523 11:39:29.544" rpa="false">
+<suite id="s1" name="Test1" source="C:\Test cases\untitled1\Annatest\test1.robot">
+<test id="s1-t1" name="Min and max">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>max($list)</arg>
+</arguments>
+<assign>
+<var>${max}</var>
+</assign>
+<msg timestamp="20210523 11:39:29.584" level="INFO">${max} = 10</msg>
+<status status="PASS" starttime="20210523 11:39:29.580" endtime="20210523 11:39:29.585"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>min($list)</arg>
+</arguments>
+<assign>
+<var>${min}</var>
+</assign>
+<msg timestamp="20210523 11:39:29.586" level="INFO">${min} = -1</msg>
+<status status="PASS" starttime="20210523 11:39:29.586" endtime="20210523 11:39:29.586"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${max}</arg>
+</arguments>
+<msg timestamp="20210523 11:39:29.587" level="INFO">10</msg>
+<status status="PASS" starttime="20210523 11:39:29.586" endtime="20210523 11:39:29.587"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${min}</arg>
+</arguments>
+<msg timestamp="20210523 11:39:29.587" level="INFO">-1</msg>
+<status status="PASS" starttime="20210523 11:39:29.587" endtime="20210523 11:39:29.587"></status>
+</kw>
+<status status="PASS" starttime="20210523 11:39:29.579" endtime="20210523 11:39:29.588" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Unique variables">
+<kw name="Remove Duplicates" library="Collections">
+<doc>Returns a list without duplicates based on the given ``list``.</doc>
+<arguments>
+<arg>${list}</arg>
+</arguments>
+<assign>
+<var>${withoutDubl}</var>
+</assign>
+<msg timestamp="20210523 11:39:29.590" level="INFO">1 duplicate removed.</msg>
+<msg timestamp="20210523 11:39:29.590" level="INFO">${withoutDubl} = [1, 2, 3, 5, 0, -1, 10]</msg>
+<status status="PASS" starttime="20210523 11:39:29.590" endtime="20210523 11:39:29.590"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${withoutDubl}</arg>
+</arguments>
+<msg timestamp="20210523 11:39:29.591" level="INFO">[1, 2, 3, 5, 0, -1, 10]</msg>
+<status status="PASS" starttime="20210523 11:39:29.591" endtime="20210523 11:39:29.591"></status>
+</kw>
+<status status="PASS" starttime="20210523 11:39:29.589" endtime="20210523 11:39:29.591" critical="yes"></status>
+</test>
+<test id="s1-t3" name="Sum of all">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${sum}</var>
+</assign>
+<msg timestamp="20210523 11:39:29.593" level="INFO">${sum} = 0</msg>
+<status status="PASS" starttime="20210523 11:39:29.593" endtime="20210523 11:39:29.593"></status>
+</kw>
+<kw name="${count} IN [ @{list} ]" type="for">
+<kw name="${count} = 1" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${sum}+${count}</arg>
+</arguments>
+<assign>
+<var>${sum}</var>
+</assign>
+<msg timestamp="20210523 11:39:29.594" level="INFO">${sum} = 1</msg>
+<status status="PASS" starttime="20210523 11:39:29.594" endtime="20210523 11:39:29.594"></status>
+</kw>
+<status status="PASS" starttime="20210523 11:39:29.594" endtime="20210523 11:39:29.594"></status>
+</kw>
+<kw name="${count} = 2" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${sum}+${count}</arg>
+</arguments>
+<assign>
+<var>${sum}</var>
+</assign>
+<msg timestamp="20210523 11:39:29.595" level="INFO">${sum} = 3</msg>
+<status status="PASS" starttime="20210523 11:39:29.595" endtime="20210523 11:39:29.595"></status>
+</kw>
+<status status="PASS" starttime="20210523 11:39:29.594" endtime="20210523 11:39:29.595"></status>
+</kw>
+<kw name="${count} = 3" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${sum}+${count}</arg>
+</arguments>
+<assign>
+<var>${sum}</var>
+</assign>
+<msg timestamp="20210523 11:39:29.595" level="INFO">${sum} = 6</msg>
+<status status="PASS" starttime="20210523 11:39:29.595" endtime="20210523 11:39:29.595"></status>
+</kw>
+<status status="PASS" starttime="20210523 11:39:29.595" endtime="20210523 11:39:29.595"></status>
+</kw>
+<kw name="${count} = 5" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${sum}+${count}</arg>
+</arguments>
+<assign>
+<var>${sum}</var>
+</assign>
+<msg timestamp="20210523 11:39:29.596" level="INFO">${sum} = 11</msg>
+<status status="PASS" starttime="20210523 11:39:29.595" endtime="20210523 11:39:29.596"></status>
+</kw>
+<status status="PASS" starttime="20210523 11:39:29.595" endtime="20210523 11:39:29.596"></status>
+</kw>
+<kw name="${count} = 1" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${sum}+${count}</arg>
+</arguments>
+<assign>
+<var>${sum}</var>
+</assign>
+<msg timestamp="20210523 11:39:29.596" level="INFO">${sum} = 12</msg>
+<status status="PASS" starttime="20210523 11:39:29.596" endtime="20210523 11:39:29.596"></status>
+</kw>
+<status status="PASS" starttime="20210523 11:39:29.596" endtime="20210523 11:39:29.596"></status>
+</kw>
+<kw name="${count} = 0" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${sum}+${count}</arg>
+</arguments>
+<assign>
+<var>${sum}</var>
+</assign>
+<msg timestamp="20210523 11:39:29.597" level="INFO">${sum} = 12</msg>
+<status status="PASS" starttime="20210523 11:39:29.596" endtime="20210523 11:39:29.597"></status>
+</kw>
+<status status="PASS" starttime="20210523 11:39:29.596" endtime="20210523 11:39:29.597"></status>
+</kw>
+<kw name="${count} = -1" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${sum}+${count}</arg>
+</arguments>
+<assign>
+<var>${sum}</var>
+</assign>
+<msg timestamp="20210523 11:39:29.597" level="INFO">${sum} = 11</msg>
+<status status="PASS" starttime="20210523 11:39:29.597" endtime="20210523 11:39:29.597"></status>
+</kw>
+<status status="PASS" starttime="20210523 11:39:29.597" endtime="20210523 11:39:29.597"></status>
+</kw>
+<kw name="${count} = 10" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${sum}+${count}</arg>
+</arguments>
+<assign>
+<var>${sum}</var>
+</assign>
+<msg timestamp="20210523 11:39:29.598" level="INFO">${sum} = 21</msg>
+<status status="PASS" starttime="20210523 11:39:29.598" endtime="20210523 11:39:29.598"></status>
+</kw>
+<status status="PASS" starttime="20210523 11:39:29.597" endtime="20210523 11:39:29.598"></status>
+</kw>
+<status status="PASS" starttime="20210523 11:39:29.594" endtime="20210523 11:39:29.598"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${sum}</arg>
+</arguments>
+<msg timestamp="20210523 11:39:29.599" level="INFO">21</msg>
+<status status="PASS" starttime="20210523 11:39:29.598" endtime="20210523 11:39:29.599"></status>
+</kw>
+<status status="PASS" starttime="20210523 11:39:29.593" endtime="20210523 11:39:29.599" critical="yes"></status>
+</test>
+<test id="s1-t4" name="Cel to far">
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${temp[0]}</arg>
+</arguments>
+<assign>
+<var>${length}</var>
+</assign>
+<msg timestamp="20210523 11:39:29.602" level="INFO">Length is 4</msg>
+<msg timestamp="20210523 11:39:29.602" level="INFO">${length} = 4</msg>
+<status status="PASS" starttime="20210523 11:39:29.601" endtime="20210523 11:39:29.602"></status>
+</kw>
+<kw name="${i} IN RANGE [ ${length} ]" type="for">
+<kw name="${i} = 0" type="foritem">
+<kw name="Convert temp">
+<arguments>
+<arg>${temp[0][${i}]}</arg>
+<arg>${temp[1][${i}]}</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>9/5*${c}+32</arg>
+</arguments>
+<assign>
+<var>${x}</var>
+</assign>
+<msg timestamp="20210523 11:39:29.603" level="INFO">${x} = 32.0</msg>
+<status status="PASS" starttime="20210523 11:39:29.603" endtime="20210523 11:39:29.603"></status>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<arguments>
+<arg>${f}</arg>
+<arg>${x}</arg>
+</arguments>
+<msg timestamp="20210523 11:39:29.604" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'float'&gt;</msg>
+<status status="PASS" starttime="20210523 11:39:29.604" endtime="20210523 11:39:29.604"></status>
+</kw>
+<status status="PASS" starttime="20210523 11:39:29.603" endtime="20210523 11:39:29.604"></status>
+</kw>
+<status status="PASS" starttime="20210523 11:39:29.603" endtime="20210523 11:39:29.604"></status>
+</kw>
+<kw name="${i} = 1" type="foritem">
+<kw name="Convert temp">
+<arguments>
+<arg>${temp[0][${i}]}</arg>
+<arg>${temp[1][${i}]}</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>9/5*${c}+32</arg>
+</arguments>
+<assign>
+<var>${x}</var>
+</assign>
+<msg timestamp="20210523 11:39:29.605" level="INFO">${x} = 662.0</msg>
+<status status="PASS" starttime="20210523 11:39:29.605" endtime="20210523 11:39:29.605"></status>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<arguments>
+<arg>${f}</arg>
+<arg>${x}</arg>
+</arguments>
+<msg timestamp="20210523 11:39:29.605" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'float'&gt;</msg>
+<status status="PASS" starttime="20210523 11:39:29.605" endtime="20210523 11:39:29.605"></status>
+</kw>
+<status status="PASS" starttime="20210523 11:39:29.604" endtime="20210523 11:39:29.605"></status>
+</kw>
+<status status="PASS" starttime="20210523 11:39:29.604" endtime="20210523 11:39:29.605"></status>
+</kw>
+<kw name="${i} = 2" type="foritem">
+<kw name="Convert temp">
+<arguments>
+<arg>${temp[0][${i}]}</arg>
+<arg>${temp[1][${i}]}</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>9/5*${c}+32</arg>
+</arguments>
+<assign>
+<var>${x}</var>
+</assign>
+<msg timestamp="20210523 11:39:29.606" level="INFO">${x} = -25.6</msg>
+<status status="PASS" starttime="20210523 11:39:29.606" endtime="20210523 11:39:29.606"></status>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<arguments>
+<arg>${f}</arg>
+<arg>${x}</arg>
+</arguments>
+<status status="PASS" starttime="20210523 11:39:29.606" endtime="20210523 11:39:29.607"></status>
+</kw>
+<status status="PASS" starttime="20210523 11:39:29.606" endtime="20210523 11:39:29.607"></status>
+</kw>
+<status status="PASS" starttime="20210523 11:39:29.605" endtime="20210523 11:39:29.607"></status>
+</kw>
+<kw name="${i} = 3" type="foritem">
+<kw name="Convert temp">
+<arguments>
+<arg>${temp[0][${i}]}</arg>
+<arg>${temp[1][${i}]}</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>9/5*${c}+32</arg>
+</arguments>
+<assign>
+<var>${x}</var>
+</assign>
+<msg timestamp="20210523 11:39:29.608" level="INFO">${x} = 212.0</msg>
+<status status="PASS" starttime="20210523 11:39:29.607" endtime="20210523 11:39:29.608"></status>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<arguments>
+<arg>${f}</arg>
+<arg>${x}</arg>
+</arguments>
+<msg timestamp="20210523 11:39:29.608" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'float'&gt;</msg>
+<status status="PASS" starttime="20210523 11:39:29.608" endtime="20210523 11:39:29.608"></status>
+</kw>
+<status status="PASS" starttime="20210523 11:39:29.607" endtime="20210523 11:39:29.608"></status>
+</kw>
+<status status="PASS" starttime="20210523 11:39:29.607" endtime="20210523 11:39:29.608"></status>
+</kw>
+<status status="PASS" starttime="20210523 11:39:29.603" endtime="20210523 11:39:29.608"></status>
+</kw>
+<status status="PASS" starttime="20210523 11:39:29.601" endtime="20210523 11:39:29.609" critical="yes"></status>
+</test>
+<doc>Suite description</doc>
+<status status="PASS" starttime="20210523 11:39:29.545" endtime="20210523 11:39:29.611"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0">Critical Tests</stat>
+<stat pass="4" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" id="s1" name="Test1">Test1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
