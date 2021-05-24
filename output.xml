@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.8.2 on win32)" generated="20210524 21:36:39.583" rpa="false">
-<suite id="s1" name="Test1" source="C:\Test cases\untitled1\Annatest\test1.robot">
-<test id="s1-t1" name="Min and max">
+<robot generator="Robot 3.1.2 (Python 3.8.2 on win32)" generated="20210524 22:38:41.262" rpa="false">
+<suite id="s1" name="Venv" source="C:\Test cases\untitled2\venv">
+<suite id="s1-s1" name="Test1" source="C:\Test cases\untitled2\venv\Test1.robot">
+<test id="s1-s1-t1" name="Min and max">
 <kw name="Convert to int">
 <arguments>
 <arg>${list}</arg>
@@ -9,13 +10,16 @@
 <assign>
 <var>@{trgList}</var>
 </assign>
+<msg timestamp="20210524 22:38:41.306" level="TRACE">Arguments: [ ${list1}=['1', '2', '3', '5', '1', '0', '-1', '10'] ]</msg>
 <kw name="Create List" library="BuiltIn">
 <doc>Returns a list containing given items.</doc>
 <assign>
 <var>@{list2}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.628" level="INFO">@{list2} = [ ]</msg>
-<status status="PASS" starttime="20210524 21:36:39.628" endtime="20210524 21:36:39.628"></status>
+<msg timestamp="20210524 22:38:41.306" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20210524 22:38:41.306" level="TRACE">Return: []</msg>
+<msg timestamp="20210524 22:38:41.307" level="INFO">@{list2} = [ ]</msg>
+<status status="PASS" starttime="20210524 22:38:41.306" endtime="20210524 22:38:41.307"></status>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <doc>Returns and logs the length of the given item as an integer.</doc>
@@ -25,9 +29,11 @@
 <assign>
 <var>${lngth}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.628" level="INFO">Length is 8</msg>
-<msg timestamp="20210524 21:36:39.628" level="INFO">${lngth} = 8</msg>
-<status status="PASS" starttime="20210524 21:36:39.628" endtime="20210524 21:36:39.628"></status>
+<msg timestamp="20210524 22:38:41.307" level="TRACE">Arguments: [ ['1', '2', '3', '5', '1', '0', '-1', '10'] ]</msg>
+<msg timestamp="20210524 22:38:41.307" level="INFO">Length is 8</msg>
+<msg timestamp="20210524 22:38:41.307" level="TRACE">Return: 8</msg>
+<msg timestamp="20210524 22:38:41.307" level="INFO">${lngth} = 8</msg>
+<status status="PASS" starttime="20210524 22:38:41.307" endtime="20210524 22:38:41.307"></status>
 </kw>
 <kw name="${i} IN RANGE [ ${lngth} ]" type="for">
 <kw name="${i} = 0" type="foritem">
@@ -39,8 +45,12 @@
 <assign>
 <var>${z}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.629" level="INFO">${z} = 1.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.629" endtime="20210524 21:36:39.629"></status>
+<msg timestamp="20210524 22:38:41.307" level="TRACE">Arguments: [ '1' ]</msg>
+<msg timestamp="20210524 22:38:41.308" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20210524 22:38:41.308" level="TRACE">Return: 1.0</msg>
+<msg timestamp="20210524 22:38:41.308" level="INFO">${z} = 1.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.307" endtime="20210524 22:38:41.308"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -48,9 +58,11 @@
 <arg>${list2}</arg>
 <arg>${z}</arg>
 </arguments>
-<status status="PASS" starttime="20210524 21:36:39.629" endtime="20210524 21:36:39.629"></status>
+<msg timestamp="20210524 22:38:41.308" level="TRACE">Arguments: [ [] | 1.0 ]</msg>
+<msg timestamp="20210524 22:38:41.308" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.308" endtime="20210524 22:38:41.308"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.628" endtime="20210524 21:36:39.629"></status>
+<status status="PASS" starttime="20210524 22:38:41.307" endtime="20210524 22:38:41.308"></status>
 </kw>
 <kw name="${i} = 1" type="foritem">
 <kw name="Convert To Number" library="BuiltIn">
@@ -61,8 +73,12 @@
 <assign>
 <var>${z}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.630" level="INFO">${z} = 2.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.629" endtime="20210524 21:36:39.630"></status>
+<msg timestamp="20210524 22:38:41.308" level="TRACE">Arguments: [ '2' ]</msg>
+<msg timestamp="20210524 22:38:41.308" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20210524 22:38:41.308" level="TRACE">Return: 2.0</msg>
+<msg timestamp="20210524 22:38:41.308" level="INFO">${z} = 2.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.308" endtime="20210524 22:38:41.308"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -70,9 +86,11 @@
 <arg>${list2}</arg>
 <arg>${z}</arg>
 </arguments>
-<status status="PASS" starttime="20210524 21:36:39.630" endtime="20210524 21:36:39.630"></status>
+<msg timestamp="20210524 22:38:41.309" level="TRACE">Arguments: [ [1.0] | 2.0 ]</msg>
+<msg timestamp="20210524 22:38:41.309" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.309" endtime="20210524 22:38:41.309"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.629" endtime="20210524 21:36:39.630"></status>
+<status status="PASS" starttime="20210524 22:38:41.308" endtime="20210524 22:38:41.309"></status>
 </kw>
 <kw name="${i} = 2" type="foritem">
 <kw name="Convert To Number" library="BuiltIn">
@@ -83,8 +101,12 @@
 <assign>
 <var>${z}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.630" level="INFO">${z} = 3.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.630" endtime="20210524 21:36:39.630"></status>
+<msg timestamp="20210524 22:38:41.309" level="TRACE">Arguments: [ '3' ]</msg>
+<msg timestamp="20210524 22:38:41.309" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20210524 22:38:41.309" level="TRACE">Return: 3.0</msg>
+<msg timestamp="20210524 22:38:41.309" level="INFO">${z} = 3.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.309" endtime="20210524 22:38:41.309"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -92,9 +114,11 @@
 <arg>${list2}</arg>
 <arg>${z}</arg>
 </arguments>
-<status status="PASS" starttime="20210524 21:36:39.631" endtime="20210524 21:36:39.631"></status>
+<msg timestamp="20210524 22:38:41.309" level="TRACE">Arguments: [ [1.0, 2.0] | 3.0 ]</msg>
+<msg timestamp="20210524 22:38:41.310" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.309" endtime="20210524 22:38:41.310"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.630" endtime="20210524 21:36:39.631"></status>
+<status status="PASS" starttime="20210524 22:38:41.309" endtime="20210524 22:38:41.310"></status>
 </kw>
 <kw name="${i} = 3" type="foritem">
 <kw name="Convert To Number" library="BuiltIn">
@@ -105,8 +129,12 @@
 <assign>
 <var>${z}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.631" level="INFO">${z} = 5.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.631" endtime="20210524 21:36:39.631"></status>
+<msg timestamp="20210524 22:38:41.310" level="TRACE">Arguments: [ '5' ]</msg>
+<msg timestamp="20210524 22:38:41.310" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20210524 22:38:41.310" level="TRACE">Return: 5.0</msg>
+<msg timestamp="20210524 22:38:41.310" level="INFO">${z} = 5.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.310" endtime="20210524 22:38:41.310"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -114,9 +142,11 @@
 <arg>${list2}</arg>
 <arg>${z}</arg>
 </arguments>
-<status status="PASS" starttime="20210524 21:36:39.631" endtime="20210524 21:36:39.631"></status>
+<msg timestamp="20210524 22:38:41.310" level="TRACE">Arguments: [ [1.0, 2.0, 3.0] | 5.0 ]</msg>
+<msg timestamp="20210524 22:38:41.310" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.310" endtime="20210524 22:38:41.310"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.631" endtime="20210524 21:36:39.631"></status>
+<status status="PASS" starttime="20210524 22:38:41.310" endtime="20210524 22:38:41.310"></status>
 </kw>
 <kw name="${i} = 4" type="foritem">
 <kw name="Convert To Number" library="BuiltIn">
@@ -127,8 +157,12 @@
 <assign>
 <var>${z}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.632" level="INFO">${z} = 1.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.632" endtime="20210524 21:36:39.632"></status>
+<msg timestamp="20210524 22:38:41.311" level="TRACE">Arguments: [ '1' ]</msg>
+<msg timestamp="20210524 22:38:41.311" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20210524 22:38:41.311" level="TRACE">Return: 1.0</msg>
+<msg timestamp="20210524 22:38:41.311" level="INFO">${z} = 1.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.311" endtime="20210524 22:38:41.311"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -136,9 +170,11 @@
 <arg>${list2}</arg>
 <arg>${z}</arg>
 </arguments>
-<status status="PASS" starttime="20210524 21:36:39.632" endtime="20210524 21:36:39.632"></status>
+<msg timestamp="20210524 22:38:41.311" level="TRACE">Arguments: [ [1.0, 2.0, 3.0, 5.0] | 1.0 ]</msg>
+<msg timestamp="20210524 22:38:41.311" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.311" endtime="20210524 22:38:41.311"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.631" endtime="20210524 21:36:39.632"></status>
+<status status="PASS" starttime="20210524 22:38:41.311" endtime="20210524 22:38:41.311"></status>
 </kw>
 <kw name="${i} = 5" type="foritem">
 <kw name="Convert To Number" library="BuiltIn">
@@ -149,8 +185,12 @@
 <assign>
 <var>${z}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.633" level="INFO">${z} = 0.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.632" endtime="20210524 21:36:39.633"></status>
+<msg timestamp="20210524 22:38:41.312" level="TRACE">Arguments: [ '0' ]</msg>
+<msg timestamp="20210524 22:38:41.312" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20210524 22:38:41.312" level="TRACE">Return: 0.0</msg>
+<msg timestamp="20210524 22:38:41.312" level="INFO">${z} = 0.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.311" endtime="20210524 22:38:41.312"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -158,9 +198,11 @@
 <arg>${list2}</arg>
 <arg>${z}</arg>
 </arguments>
-<status status="PASS" starttime="20210524 21:36:39.633" endtime="20210524 21:36:39.633"></status>
+<msg timestamp="20210524 22:38:41.312" level="TRACE">Arguments: [ [1.0, 2.0, 3.0, 5.0, 1.0] | 0.0 ]</msg>
+<msg timestamp="20210524 22:38:41.312" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.312" endtime="20210524 22:38:41.312"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.632" endtime="20210524 21:36:39.633"></status>
+<status status="PASS" starttime="20210524 22:38:41.311" endtime="20210524 22:38:41.312"></status>
 </kw>
 <kw name="${i} = 6" type="foritem">
 <kw name="Convert To Number" library="BuiltIn">
@@ -171,8 +213,12 @@
 <assign>
 <var>${z}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.633" level="INFO">${z} = -1.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.633" endtime="20210524 21:36:39.633"></status>
+<msg timestamp="20210524 22:38:41.313" level="TRACE">Arguments: [ '-1' ]</msg>
+<msg timestamp="20210524 22:38:41.313" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20210524 22:38:41.313" level="TRACE">Return: -1.0</msg>
+<msg timestamp="20210524 22:38:41.313" level="INFO">${z} = -1.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.312" endtime="20210524 22:38:41.313"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -180,9 +226,11 @@
 <arg>${list2}</arg>
 <arg>${z}</arg>
 </arguments>
-<status status="PASS" starttime="20210524 21:36:39.633" endtime="20210524 21:36:39.633"></status>
+<msg timestamp="20210524 22:38:41.313" level="TRACE">Arguments: [ [1.0, 2.0, 3.0, 5.0, 1.0, 0.0] | -1.0 ]</msg>
+<msg timestamp="20210524 22:38:41.313" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.313" endtime="20210524 22:38:41.313"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.633" endtime="20210524 21:36:39.634"></status>
+<status status="PASS" starttime="20210524 22:38:41.312" endtime="20210524 22:38:41.313"></status>
 </kw>
 <kw name="${i} = 7" type="foritem">
 <kw name="Convert To Number" library="BuiltIn">
@@ -193,8 +241,12 @@
 <assign>
 <var>${z}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.634" level="INFO">${z} = 10.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.634" endtime="20210524 21:36:39.634"></status>
+<msg timestamp="20210524 22:38:41.313" level="TRACE">Arguments: [ '10' ]</msg>
+<msg timestamp="20210524 22:38:41.313" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20210524 22:38:41.314" level="TRACE">Return: 10.0</msg>
+<msg timestamp="20210524 22:38:41.314" level="INFO">${z} = 10.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.313" endtime="20210524 22:38:41.314"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -202,14 +254,17 @@
 <arg>${list2}</arg>
 <arg>${z}</arg>
 </arguments>
-<status status="PASS" starttime="20210524 21:36:39.634" endtime="20210524 21:36:39.634"></status>
+<msg timestamp="20210524 22:38:41.314" level="TRACE">Arguments: [ [1.0, 2.0, 3.0, 5.0, 1.0, 0.0, -1.0] | 10.0 ]</msg>
+<msg timestamp="20210524 22:38:41.314" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.314" endtime="20210524 22:38:41.314"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.634" endtime="20210524 21:36:39.634"></status>
+<status status="PASS" starttime="20210524 22:38:41.313" endtime="20210524 22:38:41.314"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.628" endtime="20210524 21:36:39.634"></status>
+<status status="PASS" starttime="20210524 22:38:41.307" endtime="20210524 22:38:41.314"></status>
 </kw>
-<msg timestamp="20210524 21:36:39.634" level="INFO">@{trgList} = [ 1.0 | 2.0 | 3.0 | 5.0 | 1.0 | 0.0 | -1.0 | 10.0 ]</msg>
-<status status="PASS" starttime="20210524 21:36:39.627" endtime="20210524 21:36:39.634"></status>
+<msg timestamp="20210524 22:38:41.314" level="TRACE">Return: [1.0, 2.0, 3.0, 5.0, 1.0, 0.0, -1.0, 10.0]</msg>
+<msg timestamp="20210524 22:38:41.314" level="INFO">@{trgList} = [ 1.0 | 2.0 | 3.0 | 5.0 | 1.0 | 0.0 | -1.0 | 10.0 ]</msg>
+<status status="PASS" starttime="20210524 22:38:41.306" endtime="20210524 22:38:41.314"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -219,8 +274,10 @@
 <assign>
 <var>${max}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.639" level="INFO">${max} = 10.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.635" endtime="20210524 21:36:39.639"></status>
+<msg timestamp="20210524 22:38:41.314" level="TRACE">Arguments: [ 'max($trgList)' ]</msg>
+<msg timestamp="20210524 22:38:41.318" level="TRACE">Return: 10.0</msg>
+<msg timestamp="20210524 22:38:41.318" level="INFO">${max} = 10.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.314" endtime="20210524 22:38:41.318"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -230,28 +287,34 @@
 <assign>
 <var>${min}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.641" level="INFO">${min} = -1.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.640" endtime="20210524 21:36:39.641"></status>
+<msg timestamp="20210524 22:38:41.318" level="TRACE">Arguments: [ 'min($trgList)' ]</msg>
+<msg timestamp="20210524 22:38:41.318" level="TRACE">Return: -1.0</msg>
+<msg timestamp="20210524 22:38:41.319" level="INFO">${min} = -1.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.318" endtime="20210524 22:38:41.319"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${max}</arg>
 </arguments>
-<msg timestamp="20210524 21:36:39.642" level="INFO">10.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.642" endtime="20210524 21:36:39.642"></status>
+<msg timestamp="20210524 22:38:41.319" level="TRACE">Arguments: [ 10.0 ]</msg>
+<msg timestamp="20210524 22:38:41.319" level="INFO">10.0</msg>
+<msg timestamp="20210524 22:38:41.319" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.319" endtime="20210524 22:38:41.319"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${min}</arg>
 </arguments>
-<msg timestamp="20210524 21:36:39.643" level="INFO">-1.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.642" endtime="20210524 21:36:39.643"></status>
+<msg timestamp="20210524 22:38:41.320" level="TRACE">Arguments: [ -1.0 ]</msg>
+<msg timestamp="20210524 22:38:41.320" level="INFO">-1.0</msg>
+<msg timestamp="20210524 22:38:41.320" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.320" endtime="20210524 22:38:41.320"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.627" endtime="20210524 21:36:39.643" critical="yes"></status>
+<status status="PASS" starttime="20210524 22:38:41.306" endtime="20210524 22:38:41.320" critical="yes"></status>
 </test>
-<test id="s1-t2" name="Unique variables">
+<test id="s1-s1-t2" name="Unique variables">
 <kw name="Convert to int">
 <arguments>
 <arg>${list}</arg>
@@ -259,13 +322,16 @@
 <assign>
 <var>@{trgList}</var>
 </assign>
+<msg timestamp="20210524 22:38:41.320" level="TRACE">Arguments: [ ${list1}=['1', '2', '3', '5', '1', '0', '-1', '10'] ]</msg>
 <kw name="Create List" library="BuiltIn">
 <doc>Returns a list containing given items.</doc>
 <assign>
 <var>@{list2}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.651" level="INFO">@{list2} = [ ]</msg>
-<status status="PASS" starttime="20210524 21:36:39.650" endtime="20210524 21:36:39.651"></status>
+<msg timestamp="20210524 22:38:41.320" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20210524 22:38:41.320" level="TRACE">Return: []</msg>
+<msg timestamp="20210524 22:38:41.320" level="INFO">@{list2} = [ ]</msg>
+<status status="PASS" starttime="20210524 22:38:41.320" endtime="20210524 22:38:41.320"></status>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <doc>Returns and logs the length of the given item as an integer.</doc>
@@ -275,9 +341,11 @@
 <assign>
 <var>${lngth}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.651" level="INFO">Length is 8</msg>
-<msg timestamp="20210524 21:36:39.652" level="INFO">${lngth} = 8</msg>
-<status status="PASS" starttime="20210524 21:36:39.651" endtime="20210524 21:36:39.652"></status>
+<msg timestamp="20210524 22:38:41.320" level="TRACE">Arguments: [ ['1', '2', '3', '5', '1', '0', '-1', '10'] ]</msg>
+<msg timestamp="20210524 22:38:41.321" level="INFO">Length is 8</msg>
+<msg timestamp="20210524 22:38:41.321" level="TRACE">Return: 8</msg>
+<msg timestamp="20210524 22:38:41.321" level="INFO">${lngth} = 8</msg>
+<status status="PASS" starttime="20210524 22:38:41.320" endtime="20210524 22:38:41.321"></status>
 </kw>
 <kw name="${i} IN RANGE [ ${lngth} ]" type="for">
 <kw name="${i} = 0" type="foritem">
@@ -289,8 +357,12 @@
 <assign>
 <var>${z}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.653" level="INFO">${z} = 1.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.652" endtime="20210524 21:36:39.653"></status>
+<msg timestamp="20210524 22:38:41.321" level="TRACE">Arguments: [ '1' ]</msg>
+<msg timestamp="20210524 22:38:41.321" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20210524 22:38:41.321" level="TRACE">Return: 1.0</msg>
+<msg timestamp="20210524 22:38:41.321" level="INFO">${z} = 1.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.321" endtime="20210524 22:38:41.321"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -298,9 +370,11 @@
 <arg>${list2}</arg>
 <arg>${z}</arg>
 </arguments>
-<status status="PASS" starttime="20210524 21:36:39.653" endtime="20210524 21:36:39.654"></status>
+<msg timestamp="20210524 22:38:41.322" level="TRACE">Arguments: [ [] | 1.0 ]</msg>
+<msg timestamp="20210524 22:38:41.322" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.321" endtime="20210524 22:38:41.322"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.652" endtime="20210524 21:36:39.654"></status>
+<status status="PASS" starttime="20210524 22:38:41.321" endtime="20210524 22:38:41.322"></status>
 </kw>
 <kw name="${i} = 1" type="foritem">
 <kw name="Convert To Number" library="BuiltIn">
@@ -311,8 +385,12 @@
 <assign>
 <var>${z}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.655" level="INFO">${z} = 2.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.654" endtime="20210524 21:36:39.655"></status>
+<msg timestamp="20210524 22:38:41.322" level="TRACE">Arguments: [ '2' ]</msg>
+<msg timestamp="20210524 22:38:41.322" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20210524 22:38:41.322" level="TRACE">Return: 2.0</msg>
+<msg timestamp="20210524 22:38:41.322" level="INFO">${z} = 2.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.322" endtime="20210524 22:38:41.322"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -320,9 +398,11 @@
 <arg>${list2}</arg>
 <arg>${z}</arg>
 </arguments>
-<status status="PASS" starttime="20210524 21:36:39.655" endtime="20210524 21:36:39.656"></status>
+<msg timestamp="20210524 22:38:41.322" level="TRACE">Arguments: [ [1.0] | 2.0 ]</msg>
+<msg timestamp="20210524 22:38:41.322" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.322" endtime="20210524 22:38:41.323"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.654" endtime="20210524 21:36:39.656"></status>
+<status status="PASS" starttime="20210524 22:38:41.322" endtime="20210524 22:38:41.323"></status>
 </kw>
 <kw name="${i} = 2" type="foritem">
 <kw name="Convert To Number" library="BuiltIn">
@@ -333,8 +413,12 @@
 <assign>
 <var>${z}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.657" level="INFO">${z} = 3.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.656" endtime="20210524 21:36:39.657"></status>
+<msg timestamp="20210524 22:38:41.323" level="TRACE">Arguments: [ '3' ]</msg>
+<msg timestamp="20210524 22:38:41.323" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20210524 22:38:41.323" level="TRACE">Return: 3.0</msg>
+<msg timestamp="20210524 22:38:41.323" level="INFO">${z} = 3.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.323" endtime="20210524 22:38:41.323"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -342,9 +426,11 @@
 <arg>${list2}</arg>
 <arg>${z}</arg>
 </arguments>
-<status status="PASS" starttime="20210524 21:36:39.658" endtime="20210524 21:36:39.658"></status>
+<msg timestamp="20210524 22:38:41.323" level="TRACE">Arguments: [ [1.0, 2.0] | 3.0 ]</msg>
+<msg timestamp="20210524 22:38:41.323" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.323" endtime="20210524 22:38:41.323"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.656" endtime="20210524 21:36:39.658"></status>
+<status status="PASS" starttime="20210524 22:38:41.323" endtime="20210524 22:38:41.323"></status>
 </kw>
 <kw name="${i} = 3" type="foritem">
 <kw name="Convert To Number" library="BuiltIn">
@@ -355,8 +441,12 @@
 <assign>
 <var>${z}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.660" level="INFO">${z} = 5.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.659" endtime="20210524 21:36:39.660"></status>
+<msg timestamp="20210524 22:38:41.324" level="TRACE">Arguments: [ '5' ]</msg>
+<msg timestamp="20210524 22:38:41.324" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20210524 22:38:41.324" level="TRACE">Return: 5.0</msg>
+<msg timestamp="20210524 22:38:41.324" level="INFO">${z} = 5.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.323" endtime="20210524 22:38:41.324"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -364,9 +454,11 @@
 <arg>${list2}</arg>
 <arg>${z}</arg>
 </arguments>
-<status status="PASS" starttime="20210524 21:36:39.660" endtime="20210524 21:36:39.660"></status>
+<msg timestamp="20210524 22:38:41.324" level="TRACE">Arguments: [ [1.0, 2.0, 3.0] | 5.0 ]</msg>
+<msg timestamp="20210524 22:38:41.324" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.324" endtime="20210524 22:38:41.324"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.659" endtime="20210524 21:36:39.661"></status>
+<status status="PASS" starttime="20210524 22:38:41.323" endtime="20210524 22:38:41.324"></status>
 </kw>
 <kw name="${i} = 4" type="foritem">
 <kw name="Convert To Number" library="BuiltIn">
@@ -377,8 +469,12 @@
 <assign>
 <var>${z}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.662" level="INFO">${z} = 1.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.661" endtime="20210524 21:36:39.662"></status>
+<msg timestamp="20210524 22:38:41.324" level="TRACE">Arguments: [ '1' ]</msg>
+<msg timestamp="20210524 22:38:41.325" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20210524 22:38:41.325" level="TRACE">Return: 1.0</msg>
+<msg timestamp="20210524 22:38:41.325" level="INFO">${z} = 1.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.324" endtime="20210524 22:38:41.325"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -386,9 +482,11 @@
 <arg>${list2}</arg>
 <arg>${z}</arg>
 </arguments>
-<status status="PASS" starttime="20210524 21:36:39.662" endtime="20210524 21:36:39.662"></status>
+<msg timestamp="20210524 22:38:41.325" level="TRACE">Arguments: [ [1.0, 2.0, 3.0, 5.0] | 1.0 ]</msg>
+<msg timestamp="20210524 22:38:41.325" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.325" endtime="20210524 22:38:41.325"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.661" endtime="20210524 21:36:39.662"></status>
+<status status="PASS" starttime="20210524 22:38:41.324" endtime="20210524 22:38:41.325"></status>
 </kw>
 <kw name="${i} = 5" type="foritem">
 <kw name="Convert To Number" library="BuiltIn">
@@ -399,8 +497,12 @@
 <assign>
 <var>${z}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.663" level="INFO">${z} = 0.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.663" endtime="20210524 21:36:39.664"></status>
+<msg timestamp="20210524 22:38:41.325" level="TRACE">Arguments: [ '0' ]</msg>
+<msg timestamp="20210524 22:38:41.325" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20210524 22:38:41.325" level="TRACE">Return: 0.0</msg>
+<msg timestamp="20210524 22:38:41.325" level="INFO">${z} = 0.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.325" endtime="20210524 22:38:41.325"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -408,9 +510,11 @@
 <arg>${list2}</arg>
 <arg>${z}</arg>
 </arguments>
-<status status="PASS" starttime="20210524 21:36:39.664" endtime="20210524 21:36:39.664"></status>
+<msg timestamp="20210524 22:38:41.326" level="TRACE">Arguments: [ [1.0, 2.0, 3.0, 5.0, 1.0] | 0.0 ]</msg>
+<msg timestamp="20210524 22:38:41.326" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.326" endtime="20210524 22:38:41.326"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.662" endtime="20210524 21:36:39.664"></status>
+<status status="PASS" starttime="20210524 22:38:41.325" endtime="20210524 22:38:41.326"></status>
 </kw>
 <kw name="${i} = 6" type="foritem">
 <kw name="Convert To Number" library="BuiltIn">
@@ -421,8 +525,12 @@
 <assign>
 <var>${z}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.665" level="INFO">${z} = -1.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.665" endtime="20210524 21:36:39.665"></status>
+<msg timestamp="20210524 22:38:41.326" level="TRACE">Arguments: [ '-1' ]</msg>
+<msg timestamp="20210524 22:38:41.326" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20210524 22:38:41.326" level="TRACE">Return: -1.0</msg>
+<msg timestamp="20210524 22:38:41.326" level="INFO">${z} = -1.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.326" endtime="20210524 22:38:41.326"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -430,9 +538,11 @@
 <arg>${list2}</arg>
 <arg>${z}</arg>
 </arguments>
-<status status="PASS" starttime="20210524 21:36:39.665" endtime="20210524 21:36:39.666"></status>
+<msg timestamp="20210524 22:38:41.326" level="TRACE">Arguments: [ [1.0, 2.0, 3.0, 5.0, 1.0, 0.0] | -1.0 ]</msg>
+<msg timestamp="20210524 22:38:41.327" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.326" endtime="20210524 22:38:41.327"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.664" endtime="20210524 21:36:39.666"></status>
+<status status="PASS" starttime="20210524 22:38:41.326" endtime="20210524 22:38:41.327"></status>
 </kw>
 <kw name="${i} = 7" type="foritem">
 <kw name="Convert To Number" library="BuiltIn">
@@ -443,8 +553,12 @@
 <assign>
 <var>${z}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.667" level="INFO">${z} = 10.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.666" endtime="20210524 21:36:39.667"></status>
+<msg timestamp="20210524 22:38:41.327" level="TRACE">Arguments: [ '10' ]</msg>
+<msg timestamp="20210524 22:38:41.327" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20210524 22:38:41.327" level="TRACE">Return: 10.0</msg>
+<msg timestamp="20210524 22:38:41.327" level="INFO">${z} = 10.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.327" endtime="20210524 22:38:41.327"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -452,14 +566,17 @@
 <arg>${list2}</arg>
 <arg>${z}</arg>
 </arguments>
-<status status="PASS" starttime="20210524 21:36:39.668" endtime="20210524 21:36:39.668"></status>
+<msg timestamp="20210524 22:38:41.327" level="TRACE">Arguments: [ [1.0, 2.0, 3.0, 5.0, 1.0, 0.0, -1.0] | 10.0 ]</msg>
+<msg timestamp="20210524 22:38:41.327" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.327" endtime="20210524 22:38:41.327"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.666" endtime="20210524 21:36:39.668"></status>
+<status status="PASS" starttime="20210524 22:38:41.327" endtime="20210524 22:38:41.327"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.652" endtime="20210524 21:36:39.668"></status>
+<status status="PASS" starttime="20210524 22:38:41.321" endtime="20210524 22:38:41.327"></status>
 </kw>
-<msg timestamp="20210524 21:36:39.669" level="INFO">@{trgList} = [ 1.0 | 2.0 | 3.0 | 5.0 | 1.0 | 0.0 | -1.0 | 10.0 ]</msg>
-<status status="PASS" starttime="20210524 21:36:39.650" endtime="20210524 21:36:39.669"></status>
+<msg timestamp="20210524 22:38:41.328" level="TRACE">Return: [1.0, 2.0, 3.0, 5.0, 1.0, 0.0, -1.0, 10.0]</msg>
+<msg timestamp="20210524 22:38:41.328" level="INFO">@{trgList} = [ 1.0 | 2.0 | 3.0 | 5.0 | 1.0 | 0.0 | -1.0 | 10.0 ]</msg>
+<status status="PASS" starttime="20210524 22:38:41.320" endtime="20210524 22:38:41.328"></status>
 </kw>
 <kw name="Remove Duplicates" library="Collections">
 <doc>Returns a list without duplicates based on the given ``list``.</doc>
@@ -469,21 +586,25 @@
 <assign>
 <var>${withoutDubl}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.670" level="INFO">1 duplicate removed.</msg>
-<msg timestamp="20210524 21:36:39.670" level="INFO">${withoutDubl} = [1.0, 2.0, 3.0, 5.0, 0.0, -1.0, 10.0]</msg>
-<status status="PASS" starttime="20210524 21:36:39.670" endtime="20210524 21:36:39.670"></status>
+<msg timestamp="20210524 22:38:41.328" level="TRACE">Arguments: [ [1.0, 2.0, 3.0, 5.0, 1.0, 0.0, -1.0, 10.0] ]</msg>
+<msg timestamp="20210524 22:38:41.328" level="INFO">1 duplicate removed.</msg>
+<msg timestamp="20210524 22:38:41.328" level="TRACE">Return: [1.0, 2.0, 3.0, 5.0, 0.0, -1.0, 10.0]</msg>
+<msg timestamp="20210524 22:38:41.328" level="INFO">${withoutDubl} = [1.0, 2.0, 3.0, 5.0, 0.0, -1.0, 10.0]</msg>
+<status status="PASS" starttime="20210524 22:38:41.328" endtime="20210524 22:38:41.328"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${withoutDubl}</arg>
 </arguments>
-<msg timestamp="20210524 21:36:39.672" level="INFO">[1.0, 2.0, 3.0, 5.0, 0.0, -1.0, 10.0]</msg>
-<status status="PASS" starttime="20210524 21:36:39.672" endtime="20210524 21:36:39.672"></status>
+<msg timestamp="20210524 22:38:41.328" level="TRACE">Arguments: [ [1.0, 2.0, 3.0, 5.0, 0.0, -1.0, 10.0] ]</msg>
+<msg timestamp="20210524 22:38:41.328" level="INFO">[1.0, 2.0, 3.0, 5.0, 0.0, -1.0, 10.0]</msg>
+<msg timestamp="20210524 22:38:41.328" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.328" endtime="20210524 22:38:41.328"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.645" endtime="20210524 21:36:39.673" critical="yes"></status>
+<status status="PASS" starttime="20210524 22:38:41.320" endtime="20210524 22:38:41.329" critical="yes"></status>
 </test>
-<test id="s1-t3" name="Sum of all">
+<test id="s1-s1-t3" name="Sum of all">
 <kw name="Convert to int">
 <arguments>
 <arg>${list}</arg>
@@ -491,13 +612,16 @@
 <assign>
 <var>@{trgList}</var>
 </assign>
+<msg timestamp="20210524 22:38:41.329" level="TRACE">Arguments: [ ${list1}=['1', '2', '3', '5', '1', '0', '-1', '10'] ]</msg>
 <kw name="Create List" library="BuiltIn">
 <doc>Returns a list containing given items.</doc>
 <assign>
 <var>@{list2}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.682" level="INFO">@{list2} = [ ]</msg>
-<status status="PASS" starttime="20210524 21:36:39.681" endtime="20210524 21:36:39.682"></status>
+<msg timestamp="20210524 22:38:41.329" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20210524 22:38:41.329" level="TRACE">Return: []</msg>
+<msg timestamp="20210524 22:38:41.329" level="INFO">@{list2} = [ ]</msg>
+<status status="PASS" starttime="20210524 22:38:41.329" endtime="20210524 22:38:41.329"></status>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <doc>Returns and logs the length of the given item as an integer.</doc>
@@ -507,9 +631,11 @@
 <assign>
 <var>${lngth}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.682" level="INFO">Length is 8</msg>
-<msg timestamp="20210524 21:36:39.683" level="INFO">${lngth} = 8</msg>
-<status status="PASS" starttime="20210524 21:36:39.682" endtime="20210524 21:36:39.683"></status>
+<msg timestamp="20210524 22:38:41.330" level="TRACE">Arguments: [ ['1', '2', '3', '5', '1', '0', '-1', '10'] ]</msg>
+<msg timestamp="20210524 22:38:41.330" level="INFO">Length is 8</msg>
+<msg timestamp="20210524 22:38:41.330" level="TRACE">Return: 8</msg>
+<msg timestamp="20210524 22:38:41.330" level="INFO">${lngth} = 8</msg>
+<status status="PASS" starttime="20210524 22:38:41.330" endtime="20210524 22:38:41.330"></status>
 </kw>
 <kw name="${i} IN RANGE [ ${lngth} ]" type="for">
 <kw name="${i} = 0" type="foritem">
@@ -521,8 +647,12 @@
 <assign>
 <var>${z}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.684" level="INFO">${z} = 1.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.683" endtime="20210524 21:36:39.684"></status>
+<msg timestamp="20210524 22:38:41.330" level="TRACE">Arguments: [ '1' ]</msg>
+<msg timestamp="20210524 22:38:41.330" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20210524 22:38:41.330" level="TRACE">Return: 1.0</msg>
+<msg timestamp="20210524 22:38:41.330" level="INFO">${z} = 1.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.330" endtime="20210524 22:38:41.330"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -530,9 +660,11 @@
 <arg>${list2}</arg>
 <arg>${z}</arg>
 </arguments>
-<status status="PASS" starttime="20210524 21:36:39.684" endtime="20210524 21:36:39.685"></status>
+<msg timestamp="20210524 22:38:41.331" level="TRACE">Arguments: [ [] | 1.0 ]</msg>
+<msg timestamp="20210524 22:38:41.331" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.330" endtime="20210524 22:38:41.331"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.683" endtime="20210524 21:36:39.685"></status>
+<status status="PASS" starttime="20210524 22:38:41.330" endtime="20210524 22:38:41.331"></status>
 </kw>
 <kw name="${i} = 1" type="foritem">
 <kw name="Convert To Number" library="BuiltIn">
@@ -543,8 +675,12 @@
 <assign>
 <var>${z}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.686" level="INFO">${z} = 2.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.685" endtime="20210524 21:36:39.686"></status>
+<msg timestamp="20210524 22:38:41.331" level="TRACE">Arguments: [ '2' ]</msg>
+<msg timestamp="20210524 22:38:41.331" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20210524 22:38:41.331" level="TRACE">Return: 2.0</msg>
+<msg timestamp="20210524 22:38:41.331" level="INFO">${z} = 2.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.331" endtime="20210524 22:38:41.331"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -552,9 +688,11 @@
 <arg>${list2}</arg>
 <arg>${z}</arg>
 </arguments>
-<status status="PASS" starttime="20210524 21:36:39.686" endtime="20210524 21:36:39.686"></status>
+<msg timestamp="20210524 22:38:41.331" level="TRACE">Arguments: [ [1.0] | 2.0 ]</msg>
+<msg timestamp="20210524 22:38:41.331" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.331" endtime="20210524 22:38:41.331"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.685" endtime="20210524 21:36:39.686"></status>
+<status status="PASS" starttime="20210524 22:38:41.331" endtime="20210524 22:38:41.331"></status>
 </kw>
 <kw name="${i} = 2" type="foritem">
 <kw name="Convert To Number" library="BuiltIn">
@@ -565,8 +703,12 @@
 <assign>
 <var>${z}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.687" level="INFO">${z} = 3.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.687" endtime="20210524 21:36:39.688"></status>
+<msg timestamp="20210524 22:38:41.332" level="TRACE">Arguments: [ '3' ]</msg>
+<msg timestamp="20210524 22:38:41.332" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20210524 22:38:41.332" level="TRACE">Return: 3.0</msg>
+<msg timestamp="20210524 22:38:41.332" level="INFO">${z} = 3.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.332" endtime="20210524 22:38:41.332"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -574,9 +716,11 @@
 <arg>${list2}</arg>
 <arg>${z}</arg>
 </arguments>
-<status status="PASS" starttime="20210524 21:36:39.688" endtime="20210524 21:36:39.688"></status>
+<msg timestamp="20210524 22:38:41.332" level="TRACE">Arguments: [ [1.0, 2.0] | 3.0 ]</msg>
+<msg timestamp="20210524 22:38:41.332" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.332" endtime="20210524 22:38:41.332"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.686" endtime="20210524 21:36:39.688"></status>
+<status status="PASS" starttime="20210524 22:38:41.332" endtime="20210524 22:38:41.332"></status>
 </kw>
 <kw name="${i} = 3" type="foritem">
 <kw name="Convert To Number" library="BuiltIn">
@@ -587,8 +731,12 @@
 <assign>
 <var>${z}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.689" level="INFO">${z} = 5.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.689" endtime="20210524 21:36:39.689"></status>
+<msg timestamp="20210524 22:38:41.333" level="TRACE">Arguments: [ '5' ]</msg>
+<msg timestamp="20210524 22:38:41.333" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20210524 22:38:41.333" level="TRACE">Return: 5.0</msg>
+<msg timestamp="20210524 22:38:41.333" level="INFO">${z} = 5.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.332" endtime="20210524 22:38:41.333"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -596,9 +744,11 @@
 <arg>${list2}</arg>
 <arg>${z}</arg>
 </arguments>
-<status status="PASS" starttime="20210524 21:36:39.690" endtime="20210524 21:36:39.690"></status>
+<msg timestamp="20210524 22:38:41.333" level="TRACE">Arguments: [ [1.0, 2.0, 3.0] | 5.0 ]</msg>
+<msg timestamp="20210524 22:38:41.333" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.333" endtime="20210524 22:38:41.333"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.688" endtime="20210524 21:36:39.690"></status>
+<status status="PASS" starttime="20210524 22:38:41.332" endtime="20210524 22:38:41.333"></status>
 </kw>
 <kw name="${i} = 4" type="foritem">
 <kw name="Convert To Number" library="BuiltIn">
@@ -609,8 +759,12 @@
 <assign>
 <var>${z}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.691" level="INFO">${z} = 1.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.690" endtime="20210524 21:36:39.691"></status>
+<msg timestamp="20210524 22:38:41.333" level="TRACE">Arguments: [ '1' ]</msg>
+<msg timestamp="20210524 22:38:41.334" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20210524 22:38:41.334" level="TRACE">Return: 1.0</msg>
+<msg timestamp="20210524 22:38:41.334" level="INFO">${z} = 1.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.333" endtime="20210524 22:38:41.334"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -618,9 +772,11 @@
 <arg>${list2}</arg>
 <arg>${z}</arg>
 </arguments>
-<status status="PASS" starttime="20210524 21:36:39.692" endtime="20210524 21:36:39.692"></status>
+<msg timestamp="20210524 22:38:41.334" level="TRACE">Arguments: [ [1.0, 2.0, 3.0, 5.0] | 1.0 ]</msg>
+<msg timestamp="20210524 22:38:41.334" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.334" endtime="20210524 22:38:41.334"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.690" endtime="20210524 21:36:39.692"></status>
+<status status="PASS" starttime="20210524 22:38:41.333" endtime="20210524 22:38:41.334"></status>
 </kw>
 <kw name="${i} = 5" type="foritem">
 <kw name="Convert To Number" library="BuiltIn">
@@ -631,8 +787,12 @@
 <assign>
 <var>${z}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.693" level="INFO">${z} = 0.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.693" endtime="20210524 21:36:39.693"></status>
+<msg timestamp="20210524 22:38:41.334" level="TRACE">Arguments: [ '0' ]</msg>
+<msg timestamp="20210524 22:38:41.334" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20210524 22:38:41.335" level="TRACE">Return: 0.0</msg>
+<msg timestamp="20210524 22:38:41.335" level="INFO">${z} = 0.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.334" endtime="20210524 22:38:41.335"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -640,9 +800,11 @@
 <arg>${list2}</arg>
 <arg>${z}</arg>
 </arguments>
-<status status="PASS" starttime="20210524 21:36:39.693" endtime="20210524 21:36:39.694"></status>
+<msg timestamp="20210524 22:38:41.335" level="TRACE">Arguments: [ [1.0, 2.0, 3.0, 5.0, 1.0] | 0.0 ]</msg>
+<msg timestamp="20210524 22:38:41.335" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.335" endtime="20210524 22:38:41.335"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.692" endtime="20210524 21:36:39.694"></status>
+<status status="PASS" starttime="20210524 22:38:41.334" endtime="20210524 22:38:41.335"></status>
 </kw>
 <kw name="${i} = 6" type="foritem">
 <kw name="Convert To Number" library="BuiltIn">
@@ -653,8 +815,12 @@
 <assign>
 <var>${z}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.695" level="INFO">${z} = -1.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.694" endtime="20210524 21:36:39.695"></status>
+<msg timestamp="20210524 22:38:41.335" level="TRACE">Arguments: [ '-1' ]</msg>
+<msg timestamp="20210524 22:38:41.335" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20210524 22:38:41.335" level="TRACE">Return: -1.0</msg>
+<msg timestamp="20210524 22:38:41.335" level="INFO">${z} = -1.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.335" endtime="20210524 22:38:41.335"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -662,9 +828,11 @@
 <arg>${list2}</arg>
 <arg>${z}</arg>
 </arguments>
-<status status="PASS" starttime="20210524 21:36:39.695" endtime="20210524 21:36:39.696"></status>
+<msg timestamp="20210524 22:38:41.336" level="TRACE">Arguments: [ [1.0, 2.0, 3.0, 5.0, 1.0, 0.0] | -1.0 ]</msg>
+<msg timestamp="20210524 22:38:41.336" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.336" endtime="20210524 22:38:41.336"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.694" endtime="20210524 21:36:39.696"></status>
+<status status="PASS" starttime="20210524 22:38:41.335" endtime="20210524 22:38:41.336"></status>
 </kw>
 <kw name="${i} = 7" type="foritem">
 <kw name="Convert To Number" library="BuiltIn">
@@ -675,8 +843,12 @@
 <assign>
 <var>${z}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.697" level="INFO">${z} = 10.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.696" endtime="20210524 21:36:39.697"></status>
+<msg timestamp="20210524 22:38:41.336" level="TRACE">Arguments: [ '10' ]</msg>
+<msg timestamp="20210524 22:38:41.336" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20210524 22:38:41.336" level="TRACE">Return: 10.0</msg>
+<msg timestamp="20210524 22:38:41.336" level="INFO">${z} = 10.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.336" endtime="20210524 22:38:41.336"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -684,14 +856,17 @@
 <arg>${list2}</arg>
 <arg>${z}</arg>
 </arguments>
-<status status="PASS" starttime="20210524 21:36:39.697" endtime="20210524 21:36:39.698"></status>
+<msg timestamp="20210524 22:38:41.336" level="TRACE">Arguments: [ [1.0, 2.0, 3.0, 5.0, 1.0, 0.0, -1.0] | 10.0 ]</msg>
+<msg timestamp="20210524 22:38:41.337" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.336" endtime="20210524 22:38:41.337"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.696" endtime="20210524 21:36:39.698"></status>
+<status status="PASS" starttime="20210524 22:38:41.336" endtime="20210524 22:38:41.337"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.683" endtime="20210524 21:36:39.698"></status>
+<status status="PASS" starttime="20210524 22:38:41.330" endtime="20210524 22:38:41.337"></status>
 </kw>
-<msg timestamp="20210524 21:36:39.699" level="INFO">@{trgList} = [ 1.0 | 2.0 | 3.0 | 5.0 | 1.0 | 0.0 | -1.0 | 10.0 ]</msg>
-<status status="PASS" starttime="20210524 21:36:39.680" endtime="20210524 21:36:39.699"></status>
+<msg timestamp="20210524 22:38:41.337" level="TRACE">Return: [1.0, 2.0, 3.0, 5.0, 1.0, 0.0, -1.0, 10.0]</msg>
+<msg timestamp="20210524 22:38:41.337" level="INFO">@{trgList} = [ 1.0 | 2.0 | 3.0 | 5.0 | 1.0 | 0.0 | -1.0 | 10.0 ]</msg>
+<status status="PASS" starttime="20210524 22:38:41.329" endtime="20210524 22:38:41.337"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -701,8 +876,10 @@
 <assign>
 <var>${sum}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.700" level="INFO">${sum} = 0</msg>
-<status status="PASS" starttime="20210524 21:36:39.699" endtime="20210524 21:36:39.700"></status>
+<msg timestamp="20210524 22:38:41.337" level="TRACE">Arguments: [ '0' ]</msg>
+<msg timestamp="20210524 22:38:41.337" level="TRACE">Return: '0'</msg>
+<msg timestamp="20210524 22:38:41.337" level="INFO">${sum} = 0</msg>
+<status status="PASS" starttime="20210524 22:38:41.337" endtime="20210524 22:38:41.337"></status>
 </kw>
 <kw name="${count} IN [ @{trgList} ]" type="for">
 <kw name="${count} = 1.0" type="foritem">
@@ -714,10 +891,12 @@
 <assign>
 <var>${sum}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.702" level="INFO">${sum} = 1.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.701" endtime="20210524 21:36:39.702"></status>
+<msg timestamp="20210524 22:38:41.338" level="TRACE">Arguments: [ '0+1.0' ]</msg>
+<msg timestamp="20210524 22:38:41.338" level="TRACE">Return: 1.0</msg>
+<msg timestamp="20210524 22:38:41.338" level="INFO">${sum} = 1.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.337" endtime="20210524 22:38:41.338"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.701" endtime="20210524 21:36:39.702"></status>
+<status status="PASS" starttime="20210524 22:38:41.337" endtime="20210524 22:38:41.338"></status>
 </kw>
 <kw name="${count} = 2.0" type="foritem">
 <kw name="Evaluate" library="BuiltIn">
@@ -728,10 +907,12 @@
 <assign>
 <var>${sum}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.703" level="INFO">${sum} = 3.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.702" endtime="20210524 21:36:39.703"></status>
+<msg timestamp="20210524 22:38:41.338" level="TRACE">Arguments: [ '1.0+2.0' ]</msg>
+<msg timestamp="20210524 22:38:41.338" level="TRACE">Return: 3.0</msg>
+<msg timestamp="20210524 22:38:41.338" level="INFO">${sum} = 3.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.338" endtime="20210524 22:38:41.338"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.702" endtime="20210524 21:36:39.703"></status>
+<status status="PASS" starttime="20210524 22:38:41.338" endtime="20210524 22:38:41.338"></status>
 </kw>
 <kw name="${count} = 3.0" type="foritem">
 <kw name="Evaluate" library="BuiltIn">
@@ -742,10 +923,12 @@
 <assign>
 <var>${sum}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.704" level="INFO">${sum} = 6.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.703" endtime="20210524 21:36:39.704"></status>
+<msg timestamp="20210524 22:38:41.339" level="TRACE">Arguments: [ '3.0+3.0' ]</msg>
+<msg timestamp="20210524 22:38:41.339" level="TRACE">Return: 6.0</msg>
+<msg timestamp="20210524 22:38:41.339" level="INFO">${sum} = 6.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.338" endtime="20210524 22:38:41.339"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.703" endtime="20210524 21:36:39.704"></status>
+<status status="PASS" starttime="20210524 22:38:41.338" endtime="20210524 22:38:41.339"></status>
 </kw>
 <kw name="${count} = 5.0" type="foritem">
 <kw name="Evaluate" library="BuiltIn">
@@ -756,10 +939,12 @@
 <assign>
 <var>${sum}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.705" level="INFO">${sum} = 11.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.704" endtime="20210524 21:36:39.705"></status>
+<msg timestamp="20210524 22:38:41.339" level="TRACE">Arguments: [ '6.0+5.0' ]</msg>
+<msg timestamp="20210524 22:38:41.339" level="TRACE">Return: 11.0</msg>
+<msg timestamp="20210524 22:38:41.339" level="INFO">${sum} = 11.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.339" endtime="20210524 22:38:41.339"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.704" endtime="20210524 21:36:39.705"></status>
+<status status="PASS" starttime="20210524 22:38:41.339" endtime="20210524 22:38:41.339"></status>
 </kw>
 <kw name="${count} = 1.0" type="foritem">
 <kw name="Evaluate" library="BuiltIn">
@@ -770,10 +955,12 @@
 <assign>
 <var>${sum}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.707" level="INFO">${sum} = 12.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.706" endtime="20210524 21:36:39.707"></status>
+<msg timestamp="20210524 22:38:41.340" level="TRACE">Arguments: [ '11.0+1.0' ]</msg>
+<msg timestamp="20210524 22:38:41.340" level="TRACE">Return: 12.0</msg>
+<msg timestamp="20210524 22:38:41.340" level="INFO">${sum} = 12.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.339" endtime="20210524 22:38:41.340"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.706" endtime="20210524 21:36:39.707"></status>
+<status status="PASS" starttime="20210524 22:38:41.339" endtime="20210524 22:38:41.340"></status>
 </kw>
 <kw name="${count} = 0.0" type="foritem">
 <kw name="Evaluate" library="BuiltIn">
@@ -784,10 +971,12 @@
 <assign>
 <var>${sum}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.708" level="INFO">${sum} = 12.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.707" endtime="20210524 21:36:39.708"></status>
+<msg timestamp="20210524 22:38:41.340" level="TRACE">Arguments: [ '12.0+0.0' ]</msg>
+<msg timestamp="20210524 22:38:41.340" level="TRACE">Return: 12.0</msg>
+<msg timestamp="20210524 22:38:41.340" level="INFO">${sum} = 12.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.340" endtime="20210524 22:38:41.340"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.707" endtime="20210524 21:36:39.709"></status>
+<status status="PASS" starttime="20210524 22:38:41.340" endtime="20210524 22:38:41.340"></status>
 </kw>
 <kw name="${count} = -1.0" type="foritem">
 <kw name="Evaluate" library="BuiltIn">
@@ -798,10 +987,12 @@
 <assign>
 <var>${sum}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.710" level="INFO">${sum} = 11.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.709" endtime="20210524 21:36:39.710"></status>
+<msg timestamp="20210524 22:38:41.340" level="TRACE">Arguments: [ '12.0+-1.0' ]</msg>
+<msg timestamp="20210524 22:38:41.341" level="TRACE">Return: 11.0</msg>
+<msg timestamp="20210524 22:38:41.341" level="INFO">${sum} = 11.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.340" endtime="20210524 22:38:41.341"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.709" endtime="20210524 21:36:39.710"></status>
+<status status="PASS" starttime="20210524 22:38:41.340" endtime="20210524 22:38:41.341"></status>
 </kw>
 <kw name="${count} = 10.0" type="foritem">
 <kw name="Evaluate" library="BuiltIn">
@@ -812,24 +1003,28 @@
 <assign>
 <var>${sum}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.711" level="INFO">${sum} = 21.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.710" endtime="20210524 21:36:39.711"></status>
+<msg timestamp="20210524 22:38:41.341" level="TRACE">Arguments: [ '11.0+10.0' ]</msg>
+<msg timestamp="20210524 22:38:41.341" level="TRACE">Return: 21.0</msg>
+<msg timestamp="20210524 22:38:41.341" level="INFO">${sum} = 21.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.341" endtime="20210524 22:38:41.341"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.710" endtime="20210524 21:36:39.711"></status>
+<status status="PASS" starttime="20210524 22:38:41.341" endtime="20210524 22:38:41.341"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.701" endtime="20210524 21:36:39.711"></status>
+<status status="PASS" starttime="20210524 22:38:41.337" endtime="20210524 22:38:41.341"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${sum}</arg>
 </arguments>
-<msg timestamp="20210524 21:36:39.712" level="INFO">21.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.712" endtime="20210524 21:36:39.713"></status>
+<msg timestamp="20210524 22:38:41.341" level="TRACE">Arguments: [ 21.0 ]</msg>
+<msg timestamp="20210524 22:38:41.341" level="INFO">21.0</msg>
+<msg timestamp="20210524 22:38:41.341" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.341" endtime="20210524 22:38:41.341"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.678" endtime="20210524 21:36:39.714" critical="yes"></status>
+<status status="PASS" starttime="20210524 22:38:41.329" endtime="20210524 22:38:41.341" critical="yes"></status>
 </test>
-<test id="s1-t4" name="Cel to far">
+<test id="s1-s1-t4" name="Cel to far">
 <kw name="Convert to int">
 <arguments>
 <arg>${tempCel}</arg>
@@ -837,13 +1032,16 @@
 <assign>
 <var>@{trgTempCel}</var>
 </assign>
+<msg timestamp="20210524 22:38:41.342" level="TRACE">Arguments: [ ${list1}=['0', '350', '-32', '100'] ]</msg>
 <kw name="Create List" library="BuiltIn">
 <doc>Returns a list containing given items.</doc>
 <assign>
 <var>@{list2}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.719" level="INFO">@{list2} = [ ]</msg>
-<status status="PASS" starttime="20210524 21:36:39.719" endtime="20210524 21:36:39.719"></status>
+<msg timestamp="20210524 22:38:41.342" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20210524 22:38:41.342" level="TRACE">Return: []</msg>
+<msg timestamp="20210524 22:38:41.342" level="INFO">@{list2} = [ ]</msg>
+<status status="PASS" starttime="20210524 22:38:41.342" endtime="20210524 22:38:41.342"></status>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <doc>Returns and logs the length of the given item as an integer.</doc>
@@ -853,9 +1051,11 @@
 <assign>
 <var>${lngth}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.720" level="INFO">Length is 4</msg>
-<msg timestamp="20210524 21:36:39.720" level="INFO">${lngth} = 4</msg>
-<status status="PASS" starttime="20210524 21:36:39.720" endtime="20210524 21:36:39.720"></status>
+<msg timestamp="20210524 22:38:41.342" level="TRACE">Arguments: [ ['0', '350', '-32', '100'] ]</msg>
+<msg timestamp="20210524 22:38:41.343" level="INFO">Length is 4</msg>
+<msg timestamp="20210524 22:38:41.343" level="TRACE">Return: 4</msg>
+<msg timestamp="20210524 22:38:41.343" level="INFO">${lngth} = 4</msg>
+<status status="PASS" starttime="20210524 22:38:41.342" endtime="20210524 22:38:41.343"></status>
 </kw>
 <kw name="${i} IN RANGE [ ${lngth} ]" type="for">
 <kw name="${i} = 0" type="foritem">
@@ -867,8 +1067,12 @@
 <assign>
 <var>${z}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.722" level="INFO">${z} = 0.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.721" endtime="20210524 21:36:39.722"></status>
+<msg timestamp="20210524 22:38:41.343" level="TRACE">Arguments: [ '0' ]</msg>
+<msg timestamp="20210524 22:38:41.343" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20210524 22:38:41.343" level="TRACE">Return: 0.0</msg>
+<msg timestamp="20210524 22:38:41.343" level="INFO">${z} = 0.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.343" endtime="20210524 22:38:41.343"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -876,9 +1080,11 @@
 <arg>${list2}</arg>
 <arg>${z}</arg>
 </arguments>
-<status status="PASS" starttime="20210524 21:36:39.722" endtime="20210524 21:36:39.723"></status>
+<msg timestamp="20210524 22:38:41.343" level="TRACE">Arguments: [ [] | 0.0 ]</msg>
+<msg timestamp="20210524 22:38:41.344" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.343" endtime="20210524 22:38:41.344"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.721" endtime="20210524 21:36:39.723"></status>
+<status status="PASS" starttime="20210524 22:38:41.343" endtime="20210524 22:38:41.344"></status>
 </kw>
 <kw name="${i} = 1" type="foritem">
 <kw name="Convert To Number" library="BuiltIn">
@@ -889,8 +1095,12 @@
 <assign>
 <var>${z}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.725" level="INFO">${z} = 350.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.724" endtime="20210524 21:36:39.725"></status>
+<msg timestamp="20210524 22:38:41.344" level="TRACE">Arguments: [ '350' ]</msg>
+<msg timestamp="20210524 22:38:41.344" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20210524 22:38:41.344" level="TRACE">Return: 350.0</msg>
+<msg timestamp="20210524 22:38:41.344" level="INFO">${z} = 350.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.344" endtime="20210524 22:38:41.344"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -898,9 +1108,11 @@
 <arg>${list2}</arg>
 <arg>${z}</arg>
 </arguments>
-<status status="PASS" starttime="20210524 21:36:39.725" endtime="20210524 21:36:39.726"></status>
+<msg timestamp="20210524 22:38:41.344" level="TRACE">Arguments: [ [0.0] | 350.0 ]</msg>
+<msg timestamp="20210524 22:38:41.344" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.344" endtime="20210524 22:38:41.344"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.723" endtime="20210524 21:36:39.726"></status>
+<status status="PASS" starttime="20210524 22:38:41.344" endtime="20210524 22:38:41.344"></status>
 </kw>
 <kw name="${i} = 2" type="foritem">
 <kw name="Convert To Number" library="BuiltIn">
@@ -911,8 +1123,12 @@
 <assign>
 <var>${z}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.727" level="INFO">${z} = -32.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.726" endtime="20210524 21:36:39.727"></status>
+<msg timestamp="20210524 22:38:41.345" level="TRACE">Arguments: [ '-32' ]</msg>
+<msg timestamp="20210524 22:38:41.345" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20210524 22:38:41.345" level="TRACE">Return: -32.0</msg>
+<msg timestamp="20210524 22:38:41.345" level="INFO">${z} = -32.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.345" endtime="20210524 22:38:41.345"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -920,9 +1136,11 @@
 <arg>${list2}</arg>
 <arg>${z}</arg>
 </arguments>
-<status status="PASS" starttime="20210524 21:36:39.728" endtime="20210524 21:36:39.728"></status>
+<msg timestamp="20210524 22:38:41.345" level="TRACE">Arguments: [ [0.0, 350.0] | -32.0 ]</msg>
+<msg timestamp="20210524 22:38:41.345" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.345" endtime="20210524 22:38:41.345"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.726" endtime="20210524 21:36:39.728"></status>
+<status status="PASS" starttime="20210524 22:38:41.345" endtime="20210524 22:38:41.345"></status>
 </kw>
 <kw name="${i} = 3" type="foritem">
 <kw name="Convert To Number" library="BuiltIn">
@@ -933,8 +1151,12 @@
 <assign>
 <var>${z}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.730" level="INFO">${z} = 100.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.729" endtime="20210524 21:36:39.730"></status>
+<msg timestamp="20210524 22:38:41.346" level="TRACE">Arguments: [ '100' ]</msg>
+<msg timestamp="20210524 22:38:41.346" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20210524 22:38:41.346" level="TRACE">Return: 100.0</msg>
+<msg timestamp="20210524 22:38:41.346" level="INFO">${z} = 100.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.345" endtime="20210524 22:38:41.346"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -942,14 +1164,17 @@
 <arg>${list2}</arg>
 <arg>${z}</arg>
 </arguments>
-<status status="PASS" starttime="20210524 21:36:39.730" endtime="20210524 21:36:39.730"></status>
+<msg timestamp="20210524 22:38:41.346" level="TRACE">Arguments: [ [0.0, 350.0, -32.0] | 100.0 ]</msg>
+<msg timestamp="20210524 22:38:41.346" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.346" endtime="20210524 22:38:41.346"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.729" endtime="20210524 21:36:39.730"></status>
+<status status="PASS" starttime="20210524 22:38:41.345" endtime="20210524 22:38:41.346"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.720" endtime="20210524 21:36:39.730"></status>
+<status status="PASS" starttime="20210524 22:38:41.343" endtime="20210524 22:38:41.346"></status>
 </kw>
-<msg timestamp="20210524 21:36:39.731" level="INFO">@{trgTempCel} = [ 0.0 | 350.0 | -32.0 | 100.0 ]</msg>
-<status status="PASS" starttime="20210524 21:36:39.718" endtime="20210524 21:36:39.731"></status>
+<msg timestamp="20210524 22:38:41.346" level="TRACE">Return: [0.0, 350.0, -32.0, 100.0]</msg>
+<msg timestamp="20210524 22:38:41.346" level="INFO">@{trgTempCel} = [ 0.0 | 350.0 | -32.0 | 100.0 ]</msg>
+<status status="PASS" starttime="20210524 22:38:41.342" endtime="20210524 22:38:41.346"></status>
 </kw>
 <kw name="Convert to int">
 <arguments>
@@ -958,13 +1183,16 @@
 <assign>
 <var>@{trgTempFar}</var>
 </assign>
+<msg timestamp="20210524 22:38:41.347" level="TRACE">Arguments: [ ${list1}=['32', '662', '-25.6', '212'] ]</msg>
 <kw name="Create List" library="BuiltIn">
 <doc>Returns a list containing given items.</doc>
 <assign>
 <var>@{list2}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.733" level="INFO">@{list2} = [ ]</msg>
-<status status="PASS" starttime="20210524 21:36:39.732" endtime="20210524 21:36:39.733"></status>
+<msg timestamp="20210524 22:38:41.347" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20210524 22:38:41.347" level="TRACE">Return: []</msg>
+<msg timestamp="20210524 22:38:41.347" level="INFO">@{list2} = [ ]</msg>
+<status status="PASS" starttime="20210524 22:38:41.347" endtime="20210524 22:38:41.347"></status>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <doc>Returns and logs the length of the given item as an integer.</doc>
@@ -974,9 +1202,11 @@
 <assign>
 <var>${lngth}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.733" level="INFO">Length is 4</msg>
-<msg timestamp="20210524 21:36:39.734" level="INFO">${lngth} = 4</msg>
-<status status="PASS" starttime="20210524 21:36:39.733" endtime="20210524 21:36:39.734"></status>
+<msg timestamp="20210524 22:38:41.347" level="TRACE">Arguments: [ ['32', '662', '-25.6', '212'] ]</msg>
+<msg timestamp="20210524 22:38:41.347" level="INFO">Length is 4</msg>
+<msg timestamp="20210524 22:38:41.347" level="TRACE">Return: 4</msg>
+<msg timestamp="20210524 22:38:41.347" level="INFO">${lngth} = 4</msg>
+<status status="PASS" starttime="20210524 22:38:41.347" endtime="20210524 22:38:41.347"></status>
 </kw>
 <kw name="${i} IN RANGE [ ${lngth} ]" type="for">
 <kw name="${i} = 0" type="foritem">
@@ -988,8 +1218,12 @@
 <assign>
 <var>${z}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.735" level="INFO">${z} = 32.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.734" endtime="20210524 21:36:39.735"></status>
+<msg timestamp="20210524 22:38:41.348" level="TRACE">Arguments: [ '32' ]</msg>
+<msg timestamp="20210524 22:38:41.348" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20210524 22:38:41.348" level="TRACE">Return: 32.0</msg>
+<msg timestamp="20210524 22:38:41.348" level="INFO">${z} = 32.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.347" endtime="20210524 22:38:41.348"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -997,9 +1231,11 @@
 <arg>${list2}</arg>
 <arg>${z}</arg>
 </arguments>
-<status status="PASS" starttime="20210524 21:36:39.735" endtime="20210524 21:36:39.735"></status>
+<msg timestamp="20210524 22:38:41.348" level="TRACE">Arguments: [ [] | 32.0 ]</msg>
+<msg timestamp="20210524 22:38:41.348" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.348" endtime="20210524 22:38:41.348"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.734" endtime="20210524 21:36:39.736"></status>
+<status status="PASS" starttime="20210524 22:38:41.347" endtime="20210524 22:38:41.348"></status>
 </kw>
 <kw name="${i} = 1" type="foritem">
 <kw name="Convert To Number" library="BuiltIn">
@@ -1010,8 +1246,12 @@
 <assign>
 <var>${z}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.737" level="INFO">${z} = 662.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.736" endtime="20210524 21:36:39.737"></status>
+<msg timestamp="20210524 22:38:41.349" level="TRACE">Arguments: [ '662' ]</msg>
+<msg timestamp="20210524 22:38:41.349" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20210524 22:38:41.349" level="TRACE">Return: 662.0</msg>
+<msg timestamp="20210524 22:38:41.349" level="INFO">${z} = 662.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.348" endtime="20210524 22:38:41.349"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -1019,9 +1259,11 @@
 <arg>${list2}</arg>
 <arg>${z}</arg>
 </arguments>
-<status status="PASS" starttime="20210524 21:36:39.737" endtime="20210524 21:36:39.738"></status>
+<msg timestamp="20210524 22:38:41.349" level="TRACE">Arguments: [ [32.0] | 662.0 ]</msg>
+<msg timestamp="20210524 22:38:41.349" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.349" endtime="20210524 22:38:41.349"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.736" endtime="20210524 21:36:39.738"></status>
+<status status="PASS" starttime="20210524 22:38:41.348" endtime="20210524 22:38:41.349"></status>
 </kw>
 <kw name="${i} = 2" type="foritem">
 <kw name="Convert To Number" library="BuiltIn">
@@ -1032,8 +1274,12 @@
 <assign>
 <var>${z}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.739" level="INFO">${z} = -25.6</msg>
-<status status="PASS" starttime="20210524 21:36:39.738" endtime="20210524 21:36:39.739"></status>
+<msg timestamp="20210524 22:38:41.350" level="TRACE">Arguments: [ '-25.6' ]</msg>
+<msg timestamp="20210524 22:38:41.350" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20210524 22:38:41.350" level="TRACE">Return: -25.6</msg>
+<msg timestamp="20210524 22:38:41.350" level="INFO">${z} = -25.6</msg>
+<status status="PASS" starttime="20210524 22:38:41.349" endtime="20210524 22:38:41.350"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -1041,9 +1287,11 @@
 <arg>${list2}</arg>
 <arg>${z}</arg>
 </arguments>
-<status status="PASS" starttime="20210524 21:36:39.739" endtime="20210524 21:36:39.740"></status>
+<msg timestamp="20210524 22:38:41.350" level="TRACE">Arguments: [ [32.0, 662.0] | -25.6 ]</msg>
+<msg timestamp="20210524 22:38:41.350" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.350" endtime="20210524 22:38:41.350"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.738" endtime="20210524 21:36:39.740"></status>
+<status status="PASS" starttime="20210524 22:38:41.349" endtime="20210524 22:38:41.350"></status>
 </kw>
 <kw name="${i} = 3" type="foritem">
 <kw name="Convert To Number" library="BuiltIn">
@@ -1054,8 +1302,12 @@
 <assign>
 <var>${z}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.741" level="INFO">${z} = 212.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.740" endtime="20210524 21:36:39.742"></status>
+<msg timestamp="20210524 22:38:41.351" level="TRACE">Arguments: [ '212' ]</msg>
+<msg timestamp="20210524 22:38:41.351" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20210524 22:38:41.351" level="TRACE">Return: 212.0</msg>
+<msg timestamp="20210524 22:38:41.351" level="INFO">${z} = 212.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.350" endtime="20210524 22:38:41.351"></status>
 </kw>
 <kw name="Append To List" library="Collections">
 <doc>Adds ``values`` to the end of ``list``.</doc>
@@ -1063,14 +1315,17 @@
 <arg>${list2}</arg>
 <arg>${z}</arg>
 </arguments>
-<status status="PASS" starttime="20210524 21:36:39.742" endtime="20210524 21:36:39.742"></status>
+<msg timestamp="20210524 22:38:41.351" level="TRACE">Arguments: [ [32.0, 662.0, -25.6] | 212.0 ]</msg>
+<msg timestamp="20210524 22:38:41.351" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.351" endtime="20210524 22:38:41.351"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.740" endtime="20210524 21:36:39.743"></status>
+<status status="PASS" starttime="20210524 22:38:41.350" endtime="20210524 22:38:41.351"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.734" endtime="20210524 21:36:39.743"></status>
+<status status="PASS" starttime="20210524 22:38:41.347" endtime="20210524 22:38:41.351"></status>
 </kw>
-<msg timestamp="20210524 21:36:39.743" level="INFO">@{trgTempFar} = [ 32.0 | 662.0 | -25.6 | 212.0 ]</msg>
-<status status="PASS" starttime="20210524 21:36:39.732" endtime="20210524 21:36:39.743"></status>
+<msg timestamp="20210524 22:38:41.351" level="TRACE">Return: [32.0, 662.0, -25.6, 212.0]</msg>
+<msg timestamp="20210524 22:38:41.351" level="INFO">@{trgTempFar} = [ 32.0 | 662.0 | -25.6 | 212.0 ]</msg>
+<status status="PASS" starttime="20210524 22:38:41.346" endtime="20210524 22:38:41.351"></status>
 </kw>
 <kw name="Create List" library="BuiltIn">
 <doc>Returns a list containing given items.</doc>
@@ -1081,8 +1336,10 @@
 <assign>
 <var>@{trgTemp}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.745" level="INFO">@{trgTemp} = [ [0.0, 350.0, -32.0, 100.0] | [32.0, 662.0, -25.6, 212.0] ]</msg>
-<status status="PASS" starttime="20210524 21:36:39.744" endtime="20210524 21:36:39.745"></status>
+<msg timestamp="20210524 22:38:41.351" level="TRACE">Arguments: [ [0.0, 350.0, -32.0, 100.0] | [32.0, 662.0, -25.6, 212.0] ]</msg>
+<msg timestamp="20210524 22:38:41.352" level="TRACE">Return: [[0.0, 350.0, -32.0, 100.0], [32.0, 662.0, -25.6, 212.0]]</msg>
+<msg timestamp="20210524 22:38:41.352" level="INFO">@{trgTemp} = [ [0.0, 350.0, -32.0, 100.0] | [32.0, 662.0, -25.6, 212.0] ]</msg>
+<status status="PASS" starttime="20210524 22:38:41.351" endtime="20210524 22:38:41.352"></status>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <doc>Returns and logs the length of the given item as an integer.</doc>
@@ -1092,9 +1349,11 @@
 <assign>
 <var>${length}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.746" level="INFO">Length is 4</msg>
-<msg timestamp="20210524 21:36:39.746" level="INFO">${length} = 4</msg>
-<status status="PASS" starttime="20210524 21:36:39.746" endtime="20210524 21:36:39.746"></status>
+<msg timestamp="20210524 22:38:41.352" level="TRACE">Arguments: [ [0.0, 350.0, -32.0, 100.0] ]</msg>
+<msg timestamp="20210524 22:38:41.352" level="INFO">Length is 4</msg>
+<msg timestamp="20210524 22:38:41.352" level="TRACE">Return: 4</msg>
+<msg timestamp="20210524 22:38:41.352" level="INFO">${length} = 4</msg>
+<status status="PASS" starttime="20210524 22:38:41.352" endtime="20210524 22:38:41.352"></status>
 </kw>
 <kw name="${i} IN RANGE [ ${length} ]" type="for">
 <kw name="${i} = 0" type="foritem">
@@ -1103,6 +1362,7 @@
 <arg>${trgTemp[0][${i}]}</arg>
 <arg>${trgTemp[1][${i}]}</arg>
 </arguments>
+<msg timestamp="20210524 22:38:41.353" level="TRACE">Arguments: [ ${c}=0.0 | ${f}=32.0 ]</msg>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
@@ -1111,8 +1371,10 @@
 <assign>
 <var>${x}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.750" level="INFO">${x} = 32.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.749" endtime="20210524 21:36:39.750"></status>
+<msg timestamp="20210524 22:38:41.353" level="TRACE">Arguments: [ '9/5*0.0+32' ]</msg>
+<msg timestamp="20210524 22:38:41.353" level="TRACE">Return: 32.0</msg>
+<msg timestamp="20210524 22:38:41.353" level="INFO">${x} = 32.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.353" endtime="20210524 22:38:41.353"></status>
 </kw>
 <kw name="Should Be Equal As Numbers" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to real numbers.</doc>
@@ -1120,11 +1382,17 @@
 <arg>${f}</arg>
 <arg>${x}</arg>
 </arguments>
-<status status="PASS" starttime="20210524 21:36:39.750" endtime="20210524 21:36:39.751"></status>
+<msg timestamp="20210524 22:38:41.353" level="TRACE">Arguments: [ 32.0 | 32.0 ]</msg>
+<msg timestamp="20210524 22:38:41.353" level="DEBUG">Argument types are:
+&lt;class 'float'&gt;
+&lt;class 'float'&gt;</msg>
+<msg timestamp="20210524 22:38:41.353" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.353" endtime="20210524 22:38:41.353"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.748" endtime="20210524 21:36:39.751"></status>
+<msg timestamp="20210524 22:38:41.353" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.352" endtime="20210524 22:38:41.353"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.748" endtime="20210524 21:36:39.751"></status>
+<status status="PASS" starttime="20210524 22:38:41.352" endtime="20210524 22:38:41.354"></status>
 </kw>
 <kw name="${i} = 1" type="foritem">
 <kw name="Convert temp">
@@ -1132,6 +1400,7 @@
 <arg>${trgTemp[0][${i}]}</arg>
 <arg>${trgTemp[1][${i}]}</arg>
 </arguments>
+<msg timestamp="20210524 22:38:41.354" level="TRACE">Arguments: [ ${c}=350.0 | ${f}=662.0 ]</msg>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
@@ -1140,8 +1409,10 @@
 <assign>
 <var>${x}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.753" level="INFO">${x} = 662.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.752" endtime="20210524 21:36:39.753"></status>
+<msg timestamp="20210524 22:38:41.354" level="TRACE">Arguments: [ '9/5*350.0+32' ]</msg>
+<msg timestamp="20210524 22:38:41.354" level="TRACE">Return: 662.0</msg>
+<msg timestamp="20210524 22:38:41.354" level="INFO">${x} = 662.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.354" endtime="20210524 22:38:41.354"></status>
 </kw>
 <kw name="Should Be Equal As Numbers" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to real numbers.</doc>
@@ -1149,11 +1420,17 @@
 <arg>${f}</arg>
 <arg>${x}</arg>
 </arguments>
-<status status="PASS" starttime="20210524 21:36:39.753" endtime="20210524 21:36:39.754"></status>
+<msg timestamp="20210524 22:38:41.355" level="TRACE">Arguments: [ 662.0 | 662.0 ]</msg>
+<msg timestamp="20210524 22:38:41.355" level="DEBUG">Argument types are:
+&lt;class 'float'&gt;
+&lt;class 'float'&gt;</msg>
+<msg timestamp="20210524 22:38:41.355" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.354" endtime="20210524 22:38:41.355"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.751" endtime="20210524 21:36:39.754"></status>
+<msg timestamp="20210524 22:38:41.355" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.354" endtime="20210524 22:38:41.355"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.751" endtime="20210524 21:36:39.754"></status>
+<status status="PASS" starttime="20210524 22:38:41.354" endtime="20210524 22:38:41.355"></status>
 </kw>
 <kw name="${i} = 2" type="foritem">
 <kw name="Convert temp">
@@ -1161,6 +1438,7 @@
 <arg>${trgTemp[0][${i}]}</arg>
 <arg>${trgTemp[1][${i}]}</arg>
 </arguments>
+<msg timestamp="20210524 22:38:41.355" level="TRACE">Arguments: [ ${c}=-32.0 | ${f}=-25.6 ]</msg>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
@@ -1169,8 +1447,10 @@
 <assign>
 <var>${x}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.756" level="INFO">${x} = -25.6</msg>
-<status status="PASS" starttime="20210524 21:36:39.755" endtime="20210524 21:36:39.756"></status>
+<msg timestamp="20210524 22:38:41.356" level="TRACE">Arguments: [ '9/5*-32.0+32' ]</msg>
+<msg timestamp="20210524 22:38:41.356" level="TRACE">Return: -25.6</msg>
+<msg timestamp="20210524 22:38:41.356" level="INFO">${x} = -25.6</msg>
+<status status="PASS" starttime="20210524 22:38:41.355" endtime="20210524 22:38:41.356"></status>
 </kw>
 <kw name="Should Be Equal As Numbers" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to real numbers.</doc>
@@ -1178,11 +1458,17 @@
 <arg>${f}</arg>
 <arg>${x}</arg>
 </arguments>
-<status status="PASS" starttime="20210524 21:36:39.756" endtime="20210524 21:36:39.757"></status>
+<msg timestamp="20210524 22:38:41.356" level="TRACE">Arguments: [ -25.6 | -25.6 ]</msg>
+<msg timestamp="20210524 22:38:41.356" level="DEBUG">Argument types are:
+&lt;class 'float'&gt;
+&lt;class 'float'&gt;</msg>
+<msg timestamp="20210524 22:38:41.356" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.356" endtime="20210524 22:38:41.356"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.754" endtime="20210524 21:36:39.757"></status>
+<msg timestamp="20210524 22:38:41.356" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.355" endtime="20210524 22:38:41.356"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.754" endtime="20210524 21:36:39.757"></status>
+<status status="PASS" starttime="20210524 22:38:41.355" endtime="20210524 22:38:41.356"></status>
 </kw>
 <kw name="${i} = 3" type="foritem">
 <kw name="Convert temp">
@@ -1190,6 +1476,7 @@
 <arg>${trgTemp[0][${i}]}</arg>
 <arg>${trgTemp[1][${i}]}</arg>
 </arguments>
+<msg timestamp="20210524 22:38:41.357" level="TRACE">Arguments: [ ${c}=100.0 | ${f}=212.0 ]</msg>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
@@ -1198,8 +1485,10 @@
 <assign>
 <var>${x}</var>
 </assign>
-<msg timestamp="20210524 21:36:39.760" level="INFO">${x} = 212.0</msg>
-<status status="PASS" starttime="20210524 21:36:39.760" endtime="20210524 21:36:39.760"></status>
+<msg timestamp="20210524 22:38:41.357" level="TRACE">Arguments: [ '9/5*100.0+32' ]</msg>
+<msg timestamp="20210524 22:38:41.357" level="TRACE">Return: 212.0</msg>
+<msg timestamp="20210524 22:38:41.357" level="INFO">${x} = 212.0</msg>
+<status status="PASS" starttime="20210524 22:38:41.357" endtime="20210524 22:38:41.357"></status>
 </kw>
 <kw name="Should Be Equal As Numbers" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to real numbers.</doc>
@@ -1207,18 +1496,26 @@
 <arg>${f}</arg>
 <arg>${x}</arg>
 </arguments>
-<status status="PASS" starttime="20210524 21:36:39.760" endtime="20210524 21:36:39.761"></status>
+<msg timestamp="20210524 22:38:41.357" level="TRACE">Arguments: [ 212.0 | 212.0 ]</msg>
+<msg timestamp="20210524 22:38:41.358" level="DEBUG">Argument types are:
+&lt;class 'float'&gt;
+&lt;class 'float'&gt;</msg>
+<msg timestamp="20210524 22:38:41.358" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.357" endtime="20210524 22:38:41.358"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.758" endtime="20210524 21:36:39.761"></status>
+<msg timestamp="20210524 22:38:41.358" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20210524 22:38:41.357" endtime="20210524 22:38:41.358"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.757" endtime="20210524 21:36:39.761"></status>
+<status status="PASS" starttime="20210524 22:38:41.356" endtime="20210524 22:38:41.358"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.747" endtime="20210524 21:36:39.761"></status>
+<status status="PASS" starttime="20210524 22:38:41.352" endtime="20210524 22:38:41.358"></status>
 </kw>
-<status status="PASS" starttime="20210524 21:36:39.717" endtime="20210524 21:36:39.762" critical="yes"></status>
+<status status="PASS" starttime="20210524 22:38:41.342" endtime="20210524 22:38:41.358" critical="yes"></status>
 </test>
 <doc>Suite description</doc>
-<status status="PASS" starttime="20210524 21:36:39.585" endtime="20210524 21:36:39.766"></status>
+<status status="PASS" starttime="20210524 22:38:41.298" endtime="20210524 22:38:41.358"></status>
+</suite>
+<status status="PASS" starttime="20210524 22:38:41.264" endtime="20210524 22:38:41.359"></status>
 </suite>
 <statistics>
 <total>
@@ -1228,7 +1525,8 @@
 <tag>
 </tag>
 <suite>
-<stat pass="4" fail="0" id="s1" name="Test1">Test1</stat>
+<stat pass="4" fail="0" id="s1" name="Venv">Venv</stat>
+<stat pass="4" fail="0" id="s1-s1" name="Test1">Venv.Test1</stat>
 </suite>
 </statistics>
 <errors>
